@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiUrl:'https://api.coronavirus.data.gov.uk/v1/data',
   production: false
 };
 

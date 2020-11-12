@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ng add  @syncfusion/ej2-angular-grids
+
+https://coronavirus.data.gov.uk/details/developers-guide
+See a list of valid metrics for structure

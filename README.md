@@ -31,3 +31,4 @@ ng add  @syncfusion/ej2-angular-grids
 
 https://coronavirus.data.gov.uk/details/developers-guide
 See a list of valid metrics for structure
+https://medium.com/angular-in-depth/handle-api-call-state-nicely-445ab37cc9f8

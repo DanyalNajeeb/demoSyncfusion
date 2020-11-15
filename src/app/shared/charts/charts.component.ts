@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Chart, DateTime, LineSeries } from '@syncfusion/ej2-charts';
+import { inputs } from '@syncfusion/ej2-angular-buttons/src/button/button.component';
 
 @Component({
   selector: 'app-charts',
@@ -6,37 +8,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
-  public data:  Object[];
-  public xAxis: Object;
-  public yAxis: Object;
-  public chartTitle:string;
+  @Input() Data: any;
+  @Input() Key:any;
+  public i:number = 0;
+  public id:string ='chart-container';
+  public primaryXAxis: Object;
+  public title: string;
+  public primaryYAxis: Object;
+  public items:any =[];
 
-
-  constructor() { 
-    this.chartTitle='sales Analysis'
-    this.data=[
-      {month:'jan',sales:35},
-      {month:'feb',sales:28},
-      {month:'Mar',sales:34},
-      {month:'Apr',sales:32},
-      {month:'May',sales:35},
-      {month:'jun',sales:32},
-      {month:'jul',sales:35},
-      {month:'Aug',sales:55},
-      {month:'sep',sales:38},
-      {month:'Nov',sales:30},
-      {month:'Dec',sales:50}
-    ]
-this.xAxis={
-  title:'Month',
-  valueType:'Category'
-},
-this.yAxis={
-  title:'Sales'
-}
+  constructor() {
+   console.log(this.Key); 
   }
 
   ngOnInit(): void {
+    console.log(this.Data);
+      
+    this.primaryXAxis = {
+      valueType: 'DateTime',
+      title: 'Date',
+      labelFormat: 'dMMM'
+  };
+  this.primaryYAxis = {
+
+     title: 'Cases'
+  };
+  this.title = 'Average Cases';
   }
 
 }

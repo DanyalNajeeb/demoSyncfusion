@@ -2,12 +2,16 @@
                             <div tabindex="0" class="e-card" id="vertical_business">
                                 <div class="e-card-header">
                                     <div class="e-card-header-caption">
-                                        <div class="e-card-header-title">total cases</div>
+                                        {{key}} <span>Last updated {{latestby(data) | date}}</span>
+                                        <div class="e-card-header-title">{{iterate(data)}}
+                                            <p> 
+                                                {{sevenDay(data)}}
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="e-card-actions">
-                                    <button class="e-card-btn">
-                                        <div class="e-email e-card-btn-txt">mayum@mail.com</div>
-                                    </button>
+                                   <app-charts [Data]="data" [Key]="key" ></app-charts>
                                 </div>
                             </div>

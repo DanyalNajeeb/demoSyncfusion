@@ -1,5 +1,5 @@
-<ejs-chart [primaryXAxis]=xAxis [primaryYAxis]=yAxis >
+<ejs-chart  id="{{Key}}" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='title'>
     <e-series-collection>
-        <e-series type='Line' [dataSource]='data' xName='month' yName='sales'></e-series>
+        <e-series [dataSource]="Data" type='Spline' xName='date' yName='cases'  width=2 ></e-series>
     </e-series-collection>
 </ejs-chart>

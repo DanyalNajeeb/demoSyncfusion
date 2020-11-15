@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 import { ButtonComponent, RadioButtonComponent } from "@syncfusion/ej2-angular-buttons";
 @Component({
@@ -8,6 +8,7 @@ import { ButtonComponent, RadioButtonComponent } from "@syncfusion/ej2-angular-b
 })
 export class NavigationComponent implements OnInit {
   @ViewChild('sidebar') sidebar: SidebarComponent;
+  @Input() date: any;
   public type: string = 'Push';
   public target: string = 'content';
   public enablePersistence: boolean = true;
@@ -30,8 +31,7 @@ export class NavigationComponent implements OnInit {
       this.togglebtn.element.classList.remove('e-active');
       this.togglebtn.content = 'Open'
   }
-  @ViewChild('radio')
-  public radiobutton: RadioButtonComponent;
+ 
   public changeHandler(args: any): void {
       this.sidebar.position = (args.event.target.ej2_instances[0].label == "Left") ? "Left" : "Right";
   }

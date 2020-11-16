@@ -1,5 +1,8 @@
-.card-control-section.basic_card_layout #weather_card.e-card {
-    /* background-image: url('~/assets/card/images/weather.png'); */
+#maincontent{
+    background: #EEF0F2;
+}
+.row{
+    margin: 0;
 }
 
 .card-control-section.basic_card_layout #weather_card.e-card .e-card-header-caption .e-card-header-title,

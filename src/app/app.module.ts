@@ -25,7 +25,9 @@ import {ChartsComponent} from './shared/charts/charts.component';
     ButtonModule,
     RadioButtonModule,
     HttpClientModule,
-    ChartModule
+    ChartModule,
+    ButtonModule
+    
   ],
   bootstrap: [AppComponent],
   providers: [ DateTimeService,SplineSeriesService, LineSeriesService, DateTimeCategoryService, StripLineService]

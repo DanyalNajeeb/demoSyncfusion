@@ -6,10 +6,11 @@ import {CovidApiService} from '../../service/covid-api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  displayLoader=false;
+  displayLoader=true;
   covidData;
   public DataList:any=[];
   constructor(private covidApi:CovidApiService) {
+    // displayLoader=true;
    this.inilialize();
    }
 

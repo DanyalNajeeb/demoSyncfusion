@@ -10,6 +10,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './shared/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ChartsComponent} from './shared/charts/charts.component';
+import { StoreModule } from '@ngrx/store';
+import { DataReducer } from './NGRX/data';
+import { EffectsModule } from '@ngrx/effects';
+import { DataEffects } from './NGRX/data.effect';
+// import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,10 @@ import {ChartsComponent} from './shared/charts/charts.component';
     RadioButtonModule,
     HttpClientModule,
     ChartModule,
-    ButtonModule
+    ButtonModule,
+    StoreModule.forRoot({Data: DataReducer}),
+    EffectsModule.forRoot([DataEffects]),
+    // StoreDevtoolsModule.instrument()
     
   ],
   bootstrap: [AppComponent],

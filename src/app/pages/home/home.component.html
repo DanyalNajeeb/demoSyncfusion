@@ -1,16 +1,21 @@
 
 <div  id="maincontent" class="content">
-        <div id="overlay" *ngIf="displayLoader">
+    {{loadable}}
+        <div id="overlay" *ngIf="loadable.loading">
                 <div class="spinner"></div>
          </div>
-    <div class="text-center">
-        <button ejs-button cssClass="e-info" (click)=reload()>Reload </button>
-    </div>
+         <div *ngIf="loadable.error">{{loadable?.error?.message || 'Something went wrong'}}</div>
+    
+         <ng-container *ngIf="loadable.success">
+            <ng-content></ng-content>
+        </ng-container>
+         
 
-    <div class='row'>
+    <!-- <p *ngFor="let item of data$">{{item}}</p> -->
+
+    <!-- <div class='row'>
         <div *ngFor="let task of DataList | keyvalue " class="col-xs-3 col-sm-3 col-lg-3 col-md-3 d-Line">
-            <!-- {{task}} -->
             <app-card [data]="task.value | slice:0:28" [key]="task.key" ></app-card>
         </div>
-    </div>
+    </div> -->
 </div>

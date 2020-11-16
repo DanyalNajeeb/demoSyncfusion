@@ -1,5 +1,16 @@
 <app-navigation ></app-navigation>
-<app-home></app-home>
+<app-home [loadable]="datas$ | async">
+
+    <div class="text-center">
+        <p *ngFor="let item of (datas$ | async).entities">{{ item }}</p>
+
+        <!-- <button ejs-button cssClass="e-info" (click)=reload()>Reload </button> -->
+    </div>
+    <!-- <p *ngFor="let item of (data$ | async).entities">{{item}}</p> -->
+
+
+</app-home>
+
 <!-- <div id="maincontent" class="content">
 
     <div>

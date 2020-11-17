@@ -1,0 +1,5 @@
+<ejs-chart  id="{{Key}}" [primaryXAxis]='primaryXAxis'[primaryYAxis]='primaryYAxis' [title]='title' >
+    <e-series-collection>
+        <e-series [dataSource]="Data" type='Spline' xName='date' yName='cases'  width=2 ></e-series>
+    </e-series-collection>
+</ejs-chart>

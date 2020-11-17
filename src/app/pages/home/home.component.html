@@ -1,0 +1,16 @@
+
+<div  id="maincontent" class="content">
+        <div id="overlay" *ngIf="loadable.loading">
+                <div class="spinner"></div>
+         </div>
+         <div *ngIf="loadable.error">{{loadable?.error?.message || 'Something went wrong'}}</div>
+    
+         <ng-container *ngIf="loadable.success">
+            <ng-content></ng-content>
+        </ng-container>
+         
+
+    <!-- <p *ngFor="let item of data$">{{item}}</p> -->
+
+   
+</div>

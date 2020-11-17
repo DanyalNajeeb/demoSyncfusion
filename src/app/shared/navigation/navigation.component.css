@@ -1,0 +1,13 @@
+
+#head {
+    border: 1px solid #00A5E0;
+    border-bottom-color: transparent;
+    background: #00A5E0;
+}
+#head p{
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+    font-weight: 300;
+}
+

@@ -1,0 +1,29 @@
+<div tabindex="0" class="e-card" id="vertical_business">
+  <div class="e-card-header">
+    <div class="e-card-header-caption">
+      <div class="mainhead">
+        <h1>{{key}}
+        </h1>
+        <span class="lastUpdated">Last updated {{latestby(data) | date:'shortDate'}}</span>
+
+      </div>
+
+      <div class="e-card-header-title">
+        <div class="daily">
+          <p class="subHeading">Daily:</p>
+          <span class="subContent">{{iterate(data)}}</span>
+
+        </div>
+        <div class="sevenDays">
+          <p class="subHeading"> Last & days:</p>
+          <span class="subContent">{{sevenDay(data)}}</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="e-card-actions">
+    <app-charts [Data]="sendData(data)" [Key]="key"></app-charts>
+  </div>
+</div>

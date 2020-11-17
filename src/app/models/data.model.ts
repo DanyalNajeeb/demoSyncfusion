@@ -22,7 +22,6 @@ export class typeModel {
   
     setData(data) {
       let currentDateRow = null;
-    //   debugger;
       if (data.length) {
         currentDateRow = data[0];
       }

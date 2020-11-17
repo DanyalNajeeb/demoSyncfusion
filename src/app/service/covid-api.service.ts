@@ -1,4 +1,4 @@
-import { DataModel } from './../models/data.model';
+import { DataModel } from './../models/Data.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {environment} from '../../environments/environment'
@@ -51,8 +51,6 @@ export class CovidApiService {
     };
     return this.httpClient.get(this.API_SERVER+'?filters='+filters+'&structure='+JSON.stringify(structure), { headers: reqHeader }).pipe(map(data => {
           this.covidData=data['data'];
-          console.log("in api");
-          console.log(this.covidData);
           return this.covidData;
         }),catchError(err=>{
           return err}));

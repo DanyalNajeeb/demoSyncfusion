@@ -1,6 +1,5 @@
 
 <div  id="maincontent" class="content">
-    {{loadable}}
         <div id="overlay" *ngIf="loadable.loading">
                 <div class="spinner"></div>
          </div>
@@ -13,9 +12,5 @@
 
     <!-- <p *ngFor="let item of data$">{{item}}</p> -->
 
-    <!-- <div class='row'>
-        <div *ngFor="let task of DataList | keyvalue " class="col-xs-3 col-sm-3 col-lg-3 col-md-3 d-Line">
-            <app-card [data]="task.value | slice:0:28" [key]="task.key" ></app-card>
-        </div>
-    </div> -->
+   
 </div>

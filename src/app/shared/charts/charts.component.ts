@@ -18,11 +18,11 @@ export class ChartsComponent implements OnInit {
   public items:any =[];
 
   constructor() {
-   console.log(this.Key); 
+  //  console.log(this.Key); 
   }
 
   ngOnInit(): void {
-    console.log(this.Data);
+    // console.log(this.Data);
       
     this.primaryXAxis = {
       valueType: 'DateTime',

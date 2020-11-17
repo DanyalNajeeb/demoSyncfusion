@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CovidApiService } from './service/covid-api.service';
 import { Observable } from 'rxjs';
-import { Data } from './NGRX/data';
+import { Data } from './NGRX/Data';
 import { Store } from '@ngrx/store';
-import { LoadData } from './NGRX/data.actions';
+import { LoadData } from './NGRX/Data.actions';
 
 @Component({
   selector: 'app-root',
@@ -11,24 +11,16 @@ import { LoadData } from './NGRX/data.actions';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  datas$:Observable<Data>;
+  data$:Observable<Data>;
   lastUpdate;
-  constructor(private store: Store<{data: Data}>) {
-    // this.covidApi.getData().subscribe(()=>{
-    // this.covidApi.processData();
-    // // this.lastUpdate=this.covidApi.getLastUpdate();
-    // // console.log();
-    //  });
-    // debugger;
-    this.datas$ = this.store.select(state => state.data);
-                              //<<<---using ()=> syntax
+  constructor(private store: Store<{Data: Data}>) {
+    this.data$ = this.store.select(state => state.Data);
       this.load();
-    
-    // console.log(this.data$);
   }
   load() {
     const action = new LoadData();
     this.store.dispatch(action);
+    
   }
-  title = 'syncfusion';
+  title = 'CoronaVirus Info';
 }

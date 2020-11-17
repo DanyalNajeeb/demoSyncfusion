@@ -1,29 +1,12 @@
 <app-navigation ></app-navigation>
-<app-home [loadable]="datas$ | async">
+<app-home *ngIf="data$" [loadable]="data$ | async">
 
-    <div class="text-center">
-        <p *ngFor="let item of (datas$ | async).entities">{{ item }}</p>
-
-        <!-- <button ejs-button cssClass="e-info" (click)=reload()>Reload </button> -->
+    <div class="text-center"> 
+        <button ejs-button cssClass="e-info" (click)=load()>Reload </button>
     </div>
-    <!-- <p *ngFor="let item of (data$ | async).entities">{{item}}</p> -->
-
-
+    <div class='row'>
+            <div *ngFor="let task of (data$ | async).entities | keyvalue " class="col-xs-3 col-sm-3 col-lg-3 col-md-3 d-Line">
+                <app-card [data]="task.value | slice:0:28" [key]="task.key" ></app-card>
+            </div>
+    </div>
 </app-home>
-
-<!-- <div id="maincontent" class="content">
-
-    <div>
-        <div class="title">Main content</div>
-        <div class="rows">
-            <div class="row">
-                <ejs-radiobutton id='left' #radio label="Left" name="position" checked="true"
-                    (change)="changeHandler($event)"></ejs-radiobutton>
-            </div>
-            <div class="row">
-                <ejs-radiobutton id='right' #radio label="Right" name="position" (change)="changeHandler($event)">
-                </ejs-radiobutton>
-            </div>
-        </div>
-    </div>
-</div> -->

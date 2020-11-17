@@ -1,7 +1,7 @@
 <app-navigation ></app-navigation>
 <app-home *ngIf="data$" [loadable]="data$ | async">
 
-    <div class="text-center"> 
+    <div class="text-right reload"> 
         <button ejs-button cssClass="e-info" (click)=load()>Reload </button>
     </div>
     <div class='row'>

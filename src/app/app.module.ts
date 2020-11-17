@@ -9,12 +9,12 @@ import { ButtonModule, RadioButtonModule } from '@syncfusion/ej2-angular-buttons
 import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './shared/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
-import {ChartsComponent} from './shared/charts/charts.component';
+import { ChartsComponent} from './shared/charts/charts.component';
 import { StoreModule } from '@ngrx/store';
 import { DataReducer } from './NGRX/Data';
 import { EffectsModule } from '@ngrx/effects';
 import { DataEffects } from './NGRX/Data.effect';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [

@@ -2,11 +2,11 @@
 <app-home *ngIf="data$" [loadable]="data$ | async">
 
     <div class="text-right reload"> 
-        <button ejs-button cssClass="e-info" (click)=load()>Reload </button>
+        <button ejs-button cssClass="e-info"  class="buttn" (click)=load()>Reload </button>
     </div>
     <div class='row'>
             <div *ngFor="let task of (data$ | async).entities | keyvalue " class="col-xs-3 col-sm-3 col-lg-3 col-md-3 d-Line">
-                <app-card [data]="task.value | slice:0:28" [key]="task.key" ></app-card>
+                <app-card [data]="task.value"  [key]="task.key" ></app-card>
             </div>
     </div>
 </app-home>

@@ -9,13 +9,13 @@
       </div>
 
       <div class="e-card-header-title">
-        <div>
-          <span class="subHeading">Daily:</span>
+        <div class="daily">
+          <p class="subHeading">Daily:</p>
           <span class="subContent">{{iterate(data)}}</span>
 
         </div>
-        <div>
-          <span class="subHeading"> Last & days:</span>
+        <div class="sevenDays">
+          <p class="subHeading"> Last & days:</p>
           <span class="subContent">{{sevenDay(data)}}</span>
         </div>
 
@@ -24,6 +24,6 @@
     </div>
   </div>
   <div class="e-card-actions">
-    <app-charts [Data]="data" [Key]="key"></app-charts>
+    <app-charts [Data]="sendData(data)" [Key]="key"></app-charts>
   </div>
 </div>

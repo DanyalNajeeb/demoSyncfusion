@@ -9,7 +9,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  // latestBy;
   @Input() data: any;
   @Input() key:any;
   CovidData;
@@ -17,16 +16,13 @@ export class CardComponent implements OnInit {
   iterate(data){
     for (let index = 0; index < data.length; index++) {
       if(data[index].cases != null){
-        // this.latestBy=data[index].date;
         return data[index].cases;
-      }
-      
+      } 
     }
   }
   latestby(data){
     for (let index = 0; index < data.length; index++) {
       if(data[index].cases != null){
-        // this.latestBy=data[index].date;
         return data[index].date;
       }
       
@@ -37,9 +33,13 @@ export class CardComponent implements OnInit {
     var sum=0;
     for (let index = 0; index < 7; index++) {
      sum+=data[index].cases;
-      
     }
     return sum;
+  }
+
+  sendData(data){
+console.log()
+    return data;
   }
   ngOnInit(): void {}
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Chart, DateTime, LineSeries } from '@syncfusion/ej2-charts';
+import { Chart, DateTime, LineSeries,IAxisLabelRenderEventArgs  } from '@syncfusion/ej2-charts';
 import { inputs } from '@syncfusion/ej2-angular-buttons/src/button/button.component';
 
 @Component({
@@ -16,24 +16,18 @@ export class ChartsComponent implements OnInit {
   public title: string;
   public primaryYAxis: Object;
   public items:any =[];
-
+  
   constructor() {
   //  console.log(this.Key); 
   }
 
-  ngOnInit(): void {
-    // console.log(this.Data);
-      
+
+  ngOnInit(): void {      
     this.primaryXAxis = {
       valueType: 'DateTime',
-      title: 'Date',
       labelFormat: 'dMMM'
   };
-  this.primaryYAxis = {
-
-     title: 'Cases'
-  };
-  this.title = 'Average Cases';
+ 
   }
 
 }
